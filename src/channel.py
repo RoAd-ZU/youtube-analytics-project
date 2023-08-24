@@ -16,6 +16,7 @@ class Channel:
         print(json.dumps(self.channel, indent=2, ensure_ascii=False))
 
 api_key: str = os.getenv('API_KEY')
+
 """Здесь оставил некоторые проверки для себя"""
 # chan_youtube = Channel(api_key)
 # chan_youtube.print_info()
