@@ -14,7 +14,7 @@ class Channel:
         self.channel_id = channel_id
         self.title = self.channel["items"][0]["snippet"]["title"]
         self.description = self.channel["items"][0]["snippet"]["description"]
-        self.url = 'https://www.youtube.com/channel/' + channel_id
+        self.url = 'https://www.youtube.com/channel/' + self.channel_id
         self.subscriber_count = int(self.channel["items"][0]["statistics"]["subscriberCount"])
         self.video_count = self.channel["items"][0]["statistics"]["videoCount"]
         self.view_count = self.channel["items"][0]["statistics"]["viewCount"]
@@ -67,7 +67,7 @@ class Channel:
         return self.subscriber_count == other.subscriber_count
 
 
-api_key: str = os.getenv('API_KEY')
+# api_key: str = os.getenv('API_KEY')
 """Здесь оставил некоторые проверки для себя"""
 # chan_youtube = Channel(api_key)
 # chan_youtube.print_info()
